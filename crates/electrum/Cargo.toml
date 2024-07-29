@@ -11,9 +11,7 @@ readme = "README.md"
 
 [dependencies]
 bdk_chain = { path = "../chain", version = "0.17.0" }
-# TODO: Switch the lines below once https://github.com/bitcoindevkit/rust-electrum-client/pull/135 is merged and a new version is released
-electrum-client = { git = "https://github.com/thunderbiscuit/rust-electrum-client/", branch = "feature/rustls-ring", default-features = false }
-# electrum-client = { version = "0.20", default-features = false }
+electrum-client = { git = "https://github.com/bitcoinppl/rust-electrum-client/", branch = "feature/rustls-ring", default-features = false }
 
 [dev-dependencies]
 bdk_testenv = { path = "../testenv", default-features = false }
