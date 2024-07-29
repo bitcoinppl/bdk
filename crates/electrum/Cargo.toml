@@ -11,7 +11,7 @@ readme = "README.md"
 
 [dependencies]
 bdk_chain = { path = "../chain", version = "0.17.0" }
-electrum-client = { git = "https://github.com/bitcoinppl/rust-electrum-client/", branch = "feature/rustls-ring", default-features = false }
+electrum-client = { git = "https://github.com/bitcoinppl/rust-electrum-client/", default-features = false }
 
 [dev-dependencies]
 bdk_testenv = { path = "../testenv", default-features = false }
