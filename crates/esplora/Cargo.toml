@@ -16,7 +16,7 @@ workspace = true
 
 [dependencies]
 bdk_core = { path = "../core", version = "0.3.0", default-features = false }
-esplora-client = { version = "0.10.0", default-features = false }
+esplora-client = { version = "0.10.0", default-features = false, git = "https://github.com/bitcoinppl/rust-esplora-client" }
 async-trait = { version = "0.1.66", optional = true }
 futures = { version = "0.3.26", optional = true }
 miniscript = { version = "12.0.0", optional = true, default-features = false }
@@ -28,6 +28,7 @@ tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros"] }
 
 [features]
 default = ["std", "async-https", "blocking-https"]
+tokio = ["esplora-client/tokio"]
 std = ["bdk_chain/std", "miniscript?/std"]
 async = ["async-trait", "futures", "esplora-client/async"]
 async-https = ["async", "esplora-client/async-https"]
